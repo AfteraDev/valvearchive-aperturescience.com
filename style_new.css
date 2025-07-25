@@ -1,0 +1,436 @@
+html {
+    height: 100%
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    text-align: left
+}
+
+main {
+    margin: 12px auto;
+    max-width: 70vmax;
+    padding: 24px
+}
+
+section {
+    border: 1px solid #eee;
+    margin: 0;
+    margin-top: 12px;
+    padding: 12px;
+    padding-right: 24px;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 50vmax
+}
+
+section~section {
+    margin-left: 12px
+}
+
+p {
+    max-width: 50vmax
+}
+
+figure {
+    border: 1px solid #aaa;
+    padding: 4px
+}
+
+figcaption {
+    font-size: .8em
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 8px
+}
+
+h1,h2 {
+    margin: 0;
+    margin-bottom: .83em
+}
+
+h2,h3 {
+    color: #777
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee
+}
+
+ul,ol {
+    margin: 1em 0;
+    padding: 0;
+    padding-left: 1.5em
+}
+
+a {
+    text-decoration: none;
+    color: #07f
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+tt,code,kbd,samp {
+    background-color: #eee;
+    padding: .1em .2em;
+    border-radius: 4px
+}
+
+.shadow {
+    box-shadow: .1em .1em .5em rgba(0,0,0,0.25)
+}
+
+.flex-page {
+    display: flex;
+    flex-direction: column
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column
+}
+
+.flex-column section {
+    margin-left: 12px;
+    margin-right: 12px
+}
+
+.inline.flex-column,.inline.flex-row {
+    display: inline-flex
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start
+}
+
+.float-left {
+    float: left;
+    margin-right: 16px
+}
+
+.float-right {
+    float: right;
+    margin-left: 16px
+}
+
+nav#sidebar {
+    width: 180px;
+    border-right: 1px solid darkgray;
+    padding-bottom: 25px
+}
+
+nav#sidebar #logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 210px;
+    width: 180px;
+    background-image: url("/logo_new.png");
+    background-size: 160px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-position-y: 10px;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 25px;
+    text-decoration: none
+}
+
+nav#sidebar #logo #title {
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #F74843;
+    margin-bottom: 5px
+}
+
+nav#sidebar a:not(#logo) {
+    display: block;
+    padding-left: 20px;
+    line-height: 1.8em
+}
+
+nav#sidebar a:not(#logo):hover {
+    background-color: #eeeeee
+}
+
+nav#sidebar hr {
+    border: none;
+    border-bottom: 1px solid darkgray;
+    margin: 25px 0
+}
+
+pre.line-numbers {
+    display: block;
+    max-width: attr(width);
+    background-color: #fff;
+    color: black;
+    margin: 2em auto 2em 0;
+    padding: .5em;
+    border-radius: .25em;
+    box-shadow: .1em .1em .5em rgba(0,0,0,0.45);
+    line-height: 0;
+    counter-reset: line;
+    white-space: pre-line;
+    font-family: monospace;
+    font-size: medium
+}
+
+pre.line-numbers[title] {
+    padding-top: 15px
+}
+
+pre.line-numbers[title]::before {
+    content: attr(title);
+    margin: 0 5px 5px;
+    height: 1em;
+    display: block;
+    border-bottom: 1px solid #ddd
+}
+
+pre.line-numbers *::selection {
+    background-color: #addfff
+}
+
+pre.line-numbers span {
+    display: inline-block;
+    line-height: 1.4rem;
+    counter-increment: line 1
+}
+
+pre.line-numbers span::before {
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888
+}
+
+.code-keyword {
+    color: blue
+}
+
+.code-comment {
+    color: green
+}
+
+.code-number {
+    color: orange
+}
+
+.code-symbol {
+    color: inherit
+}
+
+.bubble-cluster {
+    display: block;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 50px
+}
+
+.bubble-cluster.small {
+    margin-bottom: 10px
+}
+
+.bubble-cluster.small .bubble {
+    height: 100px;
+    width: 100px;
+    border-width: 5px
+}
+
+.bubble-cluster:not(.small) label {
+    font-size: larger;
+    font-weight: 450
+}
+
+.bubble-portrait {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    margin: 0
+}
+
+.bubble-portrait label {
+    margin: 10px auto;
+    max-width: 130px
+}
+
+a.bubble-portrait {
+    text-decoration: none;
+    color: #217ac0;
+    text-align: center
+}
+
+a.bubble-portrait:hover {
+    color: #42a5f5
+}
+
+a.bubble-portrait label {
+    cursor: pointer
+}
+
+.grow-img img {
+    width: 60%;
+    transition: width 125ms;
+    display: block;
+    right: 0;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0
+}
+
+.grow-img:hover img {
+    width: 70% ;
+    filter: none
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    background-position: left top;
+    background-size: cover;
+    background: #e2e2e2;
+    width: 150px;
+    height: 150px;
+    border: 8px solid #e2e2e2;
+    border-radius: 50%;
+    margin: 10px 10px;
+    box-shadow: 0 0 5px grey;
+    overflow: hidden
+}
+
+:not(.grow-img)>.bubble img:first-child {
+    filter: grayscale(0%)
+}
+
+:not(.grow-img)>.bubble img:nth-child(2) {
+    filter: opacity(0%)
+}
+
+@media print {
+    :not(.grow-img)>.bubble img:nth-child(2) {
+        filter: opacity(100%)
+    }
+}
+
+:not(.grow-img)>.bubble:hover {
+    cursor: pointer
+}
+
+:not(.grow-img)>.bubble:hover img:first-child {
+    filter: grayscale(100%) blur(1px)
+}
+
+:not(.grow-img)>.bubble:hover img:nth-child(2) {
+    filter: opacity(100%)
+}
+
+:not(.grow-img)>.bubble img {
+    position: absolute;
+    left: 0;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 250ms
+}
+
+.new-pin {
+    background-color: #F74843;
+    color: white;
+    font-size: 10px;
+    font-weight: bolder;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2px 2px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 25px;
+    z-index: 10
+}
+
+.small .new-pin {
+    margin-top: 18px;
+    margin-left: 18px
+}
+
+:hover>.new-pin {
+    animation: shake .5s;
+    animation-iteration-count: infinite
+}
+
+a.external {
+  display: inline-flex;
+  align-items: center;
+}
+
+a.external img {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  vertical-align: baseline;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg)
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg)
+    }
+
+    20% {
+        transform: translate(-3px, 0) rotate(1deg)
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg)
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg)
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg)
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg)
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg)
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg)
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg)
+    }
+}

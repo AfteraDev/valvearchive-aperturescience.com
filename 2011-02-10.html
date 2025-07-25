@@ -1,0 +1,27 @@
+<html lang=en>
+
+<title>ApertureScience</title>
+
+<link rel=stylesheet href="style.css">
+<link rel=icon href="favicon.ico">
+
+<script type="text/javascript" charset="UTF-8"></script><h1 style="text-align: center; margin-top: 50px;">
+    <!-- Original Size 640x420 -->
+    <video id="ApertureScience" width="960" height="630" src="wcc_holiday10_v03.flv.mp4?v=1" autoplay></video>
+</h1>
+
+<script>
+    function random(max) { return Math.floor(Math.random() * Math.floor(max)); }
+
+    let video = document.getElementById('ApertureScience')
+    video.addEventListener('ended', () => {
+        video.src = random(15) != 2 ? 'wcc_holiday10_v03.flv.mp4?v=1' : 'wcc_holiday10_v03_egg.flv.mp4?v=1'
+        video.play()
+    })
+    document.addEventListener('pointerdown', () => {
+        if (video.paused) video.play()
+        if (video.muted) video.muted = false
+    })
+</script>
+
+</html>
